@@ -68,10 +68,16 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    better_errors (2.10.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
+      rouge (>= 1.0.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bulma-rails (0.9.4)
+      sassc (~> 2.0)
     capybara (3.39.2)
       addressable
       matrix
@@ -88,6 +94,7 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -167,11 +174,17 @@ GEM
     reline (0.3.5)
       io-console (~> 0.5)
     rexml (3.2.5)
+    rouge (4.1.2)
     rubyzip (2.3.2)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simple_form (5.2.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -211,7 +224,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  better_errors (~> 2.10)
   bootsnap
+  bulma-rails (~> 0.9.4)
   capybara
   debug
   importmap-rails
@@ -220,6 +235,7 @@ DEPENDENCIES
   rails (~> 7.0.5)
   redis (~> 4.0)
   selenium-webdriver
+  simple_form (~> 5.2)
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
