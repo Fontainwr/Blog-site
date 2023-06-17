@@ -1,23 +1,45 @@
-<% content_for :page_title,  "Fontain's Blog Post" %>
+<% content_for :page_title, "Fontain's Blog Post" %>
 
-<div class="section">
-	<div class="container">
-		<% @posts.each do |post| %>
-			<div class="card">
-		  <div class="card-content">
-		    <div class="media">
-		      <div class="media-content">
-		        <p class="title is-4"><%= link_to post.title, post  %></p>
-		      </div>
-		    </div>
-		    <div class="content">
-		     	<%= post.content %>
-		    </div>
-		    <div class="comment-count">
-		    	<span class="tag is-rounded"><%= post.comments.count %> comments</span>
-		    </div>
-		  </div>
-		</div>
-		<% end %>
-	</div>
+<style>
+  .space-gradient-bg {
+    background: linear-gradient(to bottom, #000000, #320b69);
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(38px);
+  }
+
+  .card-content {
+    color: #333333;
+  }
+</style>
+
+<div class="space-gradient-bg">
+  <div class="section">
+    <div class="container">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4"><%= link_to post.title, post %></p>
+              </div>
+            </div>
+            <div class="content">
+              <%= post.content %>
+            </div>
+            <div class="comment-count">
+              <span class="tag is-rounded"><%= post.comments.count %> comments</span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
