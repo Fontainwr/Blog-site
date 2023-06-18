@@ -1,2 +1,12 @@
-<% content_for :page_title, "Create a new post" %>
-<%= render 'form' %>
+<style>
+  .space-gradient-bg {
+    background: linear-gradient(to bottom, #000000, #320b69);
+    min-height: 100vh;
+    padding: 20px;
+  }
+</style>
+
+<div class="space-gradient-bg">
+  <% content_for :page_title, "Create a new post" %>
+  <%= render 'form' %>
+</div>
