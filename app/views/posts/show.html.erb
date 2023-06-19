@@ -6,7 +6,7 @@
     body {
       background: linear-gradient(to bottom, #000000, #320b69);
       color: white;
-      padding: 20px;
+      padding-bottom: 20px;
     }
 
     .container {
@@ -16,7 +16,7 @@
 
     .actions {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Updated */
       align-items: center;
       margin-bottom: 20px;
     }
@@ -25,7 +25,7 @@
       font-weight: bold;
     }
 
-    .actions a.button {
+    .actions .button {
       display: inline-block;
       padding: 10px 20px;
       text-decoration: none;
@@ -33,9 +33,11 @@
       background-color: #e74c3c;
       border-radius: 4px;
       transition: background-color 0.3s ease;
+      min-width: 100px;
+      border: 2px solid black; /* Added */
     }
 
-    .actions a.button:hover {
+    .actions .button:hover {
       background-color: #c0392b;
     }
 
@@ -72,7 +74,7 @@
 <body>
   <div class="container">
     <div class="actions">
-      <strong>Actions</strong>
+      <%# <strong>Actions</strong> %>
       <div>
         <%= link_to "Edit", edit_post_path(@post), class: "button" %>
         <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, remote: true, class: "button is-danger" %>
